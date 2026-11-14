@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Gerar ícones</title>
+</head>
+<body style="font-family:sans-serif;padding:20px">
+  <h2>Gerar ícones do app</h2>
+  <button onclick="baixar(192)">Baixar icon-192.png</button>
+  <button onclick="baixar(512)">Baixar icon-512.png</button>
+
+  <script>
+    function baixar(s) {
+      var c = document.createElement("canvas");
+      c.width = s;
+      c.height = s;
+      var x = c.getContext("2d");
+      var u = s / 10;
+
+      x.fillStyle = "#2f7d57";
+      x.fillRect(0, 0, s, s);
+
+      x.fillStyle = "#ffffff";
+      x.beginPath();
+      x.moveTo(s / 2, 2.2 * u);
+      x.lineTo(1.9 * u, 5 * u);
+      x.lineTo(8.1 * u, 5 * u);
+      x.closePath();
+      x.fill();
+      x.fillRect(2.8 * u, 5 * u, 4.4 * u, 2.8 * u);
+
+      x.fillStyle = "#2f7d57";
+      x.fillRect(4.4 * u, 5.9 * u, 1.2 * u, 1.9 * u);
+
+      var a = document.createElement("a");
+      a.download = "icon-" + s + ".png";
+      a.href = c.toDataURL("image/png");
+      a.click();
+    }
+  </script>
+</body>
+</html>
