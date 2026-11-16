@@ -28,8 +28,8 @@ button{background:var(--ac);color:#fff;border:0;font-weight:600;cursor:pointer}
 
 footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  background: var(--card);
-  border: 1px solid var(--bd);
+  padding: 16px;
+  font-size: 14px;
+  color: var(--mut);
+ 
 }
