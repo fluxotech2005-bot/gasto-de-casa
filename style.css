@@ -25,3 +25,11 @@ button{background:var(--ac);color:#fff;border:0;font-weight:600;cursor:pointer}
 .val{font-weight:700;white-space:nowrap}
 .del{width:auto;background:none;color:var(--rd);margin:0 0 0 8px;padding:6px 10px;font-size:20px}
 .empty{text-align:center;color:var(--mut);padding:14px}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--card);
+  border: 1px solid var(--bd);
+}
